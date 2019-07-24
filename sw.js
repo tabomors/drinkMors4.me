@@ -26,7 +26,7 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-db361eb7c7d8e0caff35.js"
+    "url": "webpack-runtime-c5cdc5bd1c9dc0cb6fca.js"
   },
   {
     "url": "styles.8fc8792284e697f5c5ad.css"
@@ -35,14 +35,14 @@ self.__precacheManifest = [
     "url": "styles-7b075c8c36826e8b6835.js"
   },
   {
-    "url": "app-493bf415b1005ef25aa9.js"
+    "url": "app-38e250a9a3df6a735798.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-fe482c9ecbcc81b9c63a.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "99367e70597c7148203e602ee206d302"
+    "revision": "1ef7a3ec69f417284e679daa3ab193fd"
   },
   {
     "url": "component---src-templates-not-found-template-js-70542bbca544d16e1852.js"
@@ -52,11 +52,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "6855c4145c1c29e10c09a15795ad57b3"
+    "revision": "e2f8b10c8ea0910c11f6a4196a5de35c"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "55a783fb4237e8261ab39ac74bd4e523"
+    "revision": "708707c12f4dfae20f2523d17dbf675b"
   },
   {
     "url": "manifest.json",
@@ -86,7 +86,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/drinkMors4.me/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/./drinkMors4.me/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -158,7 +158,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/drinkMors4.me${pathname}`
+        return `/./drinkMors4.me${pathname}`
       } else {
         return pathname
       }
