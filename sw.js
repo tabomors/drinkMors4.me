@@ -26,7 +26,7 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-b3bbcf7490cbce04ba17.js"
+    "url": "webpack-runtime-037881ac5a6b057bd373.js"
   },
   {
     "url": "styles.8fc8792284e697f5c5ad.css"
@@ -35,14 +35,14 @@ self.__precacheManifest = [
     "url": "styles-7b075c8c36826e8b6835.js"
   },
   {
-    "url": "app-54ed96e54256ffaf0c8c.js"
+    "url": "app-493bf415b1005ef25aa9.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-fe482c9ecbcc81b9c63a.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "7c95abb37d5a8c3aeba47e24f687f38e"
+    "revision": "1ffbf71249ea8c73948eea3770d84429"
   },
   {
     "url": "component---src-templates-not-found-template-js-3c5314cde1888d37b3f4.js"
@@ -52,7 +52,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "474768167164aeb7543efdd7e1204029"
+    "revision": "4907c9e19621633fbd323ec3754aa38b"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "29a55e1cb9f622011bbabb174eefe57b"
   },
   {
     "url": "manifest.json",
@@ -82,7 +86,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/drinkMors4.me/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -154,7 +158,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `${pathname}`
+        return `/drinkMors4.me${pathname}`
       } else {
         return pathname
       }
